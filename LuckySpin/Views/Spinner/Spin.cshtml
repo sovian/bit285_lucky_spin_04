@@ -1,6 +1,8 @@
 ﻿@model LuckySpin.Models.Spin
 @inject LuckySpin.Models.TextTransformService Transform
-
+@{
+    Layout = "_Layout";
+}
 <h1> Lucky Spin</h1>
 <button onclick='history.go(0)'>Spin</button>
 <div>@Model.A</div><div>@Model.B</div><div>@Model.C</div>
