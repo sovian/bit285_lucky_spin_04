@@ -4,7 +4,9 @@
     Layout = "_Layout";
 }
 <h1> Lucky Spin</h1>
+
 <button onclick='history.go(0)'>Spin</button>
 <div>@Model.A</div><div>@Model.B</div><div>@Model.C</div>
 
 <img src="/Images/LuckySpinCoins.jpg" class="animated bounce" alt="Coins" style="display:@Model.Display" />
+<h2 style="display:@Model.Display">You won @Model.Player.FirstName! Congrats!</h2>

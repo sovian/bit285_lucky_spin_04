@@ -23,17 +23,18 @@ namespace LuckySpin.Controllers
 
         //TODO: replace the int with a Player parameter and pass it onto the Spin Action
         [HttpPost]
-        public IActionResult Index(int luck)
+        public IActionResult Index(Player player)
         {
-            return RedirectToAction("Spin", luck);
+            return RedirectToAction("Spin", player);
         }
 
         
         //TODO: display the Spin View passing a new Spin that includes the Player object
         [HttpGet]
-        public IActionResult Spin(int luck)
+        public IActionResult Spin(Player player)
         {
-            return View(new Spin {  });
+            
+            return View(new Spin { Player=player });
         }
     }
 }
